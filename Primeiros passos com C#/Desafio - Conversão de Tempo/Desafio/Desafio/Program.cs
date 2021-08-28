@@ -15,9 +15,9 @@ namespace Desafio
             var timeInSeconds = int.Parse(Console.ReadLine());
             //timeInSeconds =  ;
             //continue a solucao
-            var hours = timeInSeconds/3600;
-            var minutes = timeInSeconds/60;
-            var seconds = timeInSeconds-((hours+minutes)*60);
+            var hours = (timeInSeconds/3600);
+            var minutes = (timeInSeconds % 3600) / 60;
+            var seconds = (timeInSeconds % 3600) % 60;
 
             Console.WriteLine($"{hours}:{minutes}:{seconds}");
         }
